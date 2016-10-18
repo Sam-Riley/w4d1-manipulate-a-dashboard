@@ -46,11 +46,11 @@ defaultSearch.forEach(function(defaultSearch){
 })
 
 // 6. Add the "table-hover" class to the table. See the Bootstrap table docs.
-var tableTops = document.querySelectorAll('.table-striped', '.table');
-tableTops.forEach(function(tableHover) {
-    tableHover.add('class' ,'table-hover')
-});
-console.log(tableTops);
+// var tableTops = document.querySelectorAll('.table-striped', '.table');
+// tableTops.forEach(function(tableHover) {
+//     tableHover.add('class' ,'table-hover')
+// });
+// console.log(tableTops);
 
 //Had some issues with this function. Keep receiving an error message with '.add'. I actually went and dug around on Git and google before figuring out my issue. It works but still throws an error.
 
@@ -65,10 +65,26 @@ successGuy[9].classList.add('success');
 
 // 8. Change the table header names to: ID, First Name, Last Name, Department, Client.
 
-var newHeaders = document.querySelectorAll('tbody > tr');
+var newHeaders = document.querySelectorAll('tr > th');
+newHeaders[0].innerHTML = 'ID'
+newHeaders[1].innerHTML = 'First Name'
+newHeaders[2].innerHTML = 'Last Name'
+newHeaders[3].innerHTML = 'Department'
+newHeaders[4].innerHTML = 'Client'
 
+//console.log(newHeaders)
 
 // 9. Make an array of objects, each object representing a single row in the table. Remove the commas from the ID column and convert it to an actual Number data type. Example: [{id: 1001, firstName: 'Lorem', lastName: 'ipsum', department: 'dolor', client: 'sit'}]
 
+ // var newArray = document.querySelectorAll('tbody > tr')
+
+ 
+
 
 // 10. Make each word in the table capitalized.
+
+var bigWords = document.querySelectorAll('table');
+bigWords.forEach(function(makeBig){
+makeBig.classList.add('text-capitalize')
+})
+//
